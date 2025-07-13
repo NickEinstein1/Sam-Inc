@@ -59,11 +59,11 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="gradient-bg text-white section-padding">
         <div className="container-custom text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="mobile-hero-text mb-6">
             Contact Us
           </h1>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-            Ready to transform your business? Get in touch with our experts for a 
+          <p className="mobile-subtitle text-gray-100 max-w-3xl mx-auto">
+            Ready to transform your business? Get in touch with our experts for a
             free consultation and discover how SAM INC can help you achieve your goals.
           </p>
         </div>
@@ -74,8 +74,8 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-2xl p-8 card-shadow">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <div className="bg-white rounded-2xl mobile-card card-shadow">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 Send Us a Message
               </h2>
               

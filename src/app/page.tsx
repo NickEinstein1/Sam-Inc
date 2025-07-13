@@ -44,23 +44,23 @@ export default function Home() {
       <section className="gradient-bg text-white section-padding">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <div className="space-y-6 sm:space-y-8">
+              <h1 className="mobile-hero-text">
                 Professional
                 <span className="block text-accent-200">Financial Services</span>
                 You Can Trust
               </h1>
-              <p className="text-xl text-gray-100 leading-relaxed">
-                SAM INC delivers comprehensive tax consultancy, financial auditing, 
-                data analytics, and AI solutions to drive your business forward with 
+              <p className="mobile-subtitle text-gray-100">
+                SAM INC delivers comprehensive tax consultancy, financial auditing,
+                data analytics, and AI solutions to drive your business forward with
                 confidence and precision.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="btn-secondary">
+              <div className="mobile-flex-col">
+                <Link href="/contact" className="btn-secondary inline-flex items-center justify-center">
                   Get Free Consultation
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Link>
-                <Link href="/services" className="btn-outline border-white text-white hover:bg-white hover:text-primary-600">
+                <Link href="/services" className="btn-outline border-white text-white hover:bg-white hover:text-primary-600 inline-flex items-center justify-center">
                   Explore Services
                 </Link>
               </div>
@@ -95,12 +95,12 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="mobile-grid">
             {services.map((service, index) => (
               <Link
                 key={index}
                 href={service.href}
-                className="group bg-white rounded-xl p-6 card-shadow border border-gray-100 hover:border-primary-200 transition-all duration-300"
+                className="group bg-white rounded-xl mobile-card card-shadow border border-gray-100 hover:border-primary-200 transition-all duration-300"
               >
                 <div className="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-6 h-6 text-white" />
@@ -124,22 +124,22 @@ export default function Home() {
       {/* Stats Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">500+</div>
-              <div className="text-gray-600">Satisfied Clients</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-600 mb-2">✓</div>
+              <div className="text-sm sm:text-base text-gray-600">Satisfied Clients</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-secondary-600 mb-2">15+</div>
-              <div className="text-gray-600">Years Experience</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-600 mb-2">15+</div>
+              <div className="text-sm sm:text-base text-gray-600">Years Experience</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-accent-600 mb-2">98%</div>
-              <div className="text-gray-600">Client Satisfaction</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-accent-600 mb-2">98%</div>
+              <div className="text-sm sm:text-base text-gray-600">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-primary-600 mb-2">24/7</div>
-              <div className="text-gray-600">Support Available</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary-600 mb-2">24/7</div>
+              <div className="text-sm sm:text-base text-gray-600">Support Available</div>
             </div>
           </div>
         </div>
@@ -155,9 +155,9 @@ export default function Home() {
             Get started with a free consultation and discover how SAM INC can 
             help you achieve your financial and business goals.
           </p>
-          <Link href="/contact" className="btn-secondary">
+          <Link href="/contact" className="btn-secondary inline-flex items-center justify-center">
             Schedule Free Consultation
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
           </Link>
         </div>
       </section>

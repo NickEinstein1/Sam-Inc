@@ -28,15 +28,15 @@ const Header = () => {
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <nav className="container-custom">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">S</span>
+            <div className="w-8 h-8 sm:w-10 sm:h-10 gradient-bg rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg sm:text-xl">S</span>
             </div>
             <div>
-              <h1 className="text-2xl font-bold text-primary-600">SAM INC</h1>
-              <p className="text-xs text-gray-600">Professional Services</p>
+              <h1 className="text-xl sm:text-2xl font-bold text-primary-600">SAM INC</h1>
+              <p className="text-xs text-gray-600 hidden sm:block">Professional Services</p>
             </div>
           </Link>
 
@@ -94,23 +94,23 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-gray-200 bg-white">
             {navigation.map((item) => (
-              <div key={item.name}>
+              <div key={item.name} className="mb-2">
                 <Link
                   href={item.href}
-                  className="block py-2 text-gray-700 hover:text-primary-600 font-medium"
+                  className="block py-3 px-2 text-gray-700 hover:text-primary-600 hover:bg-gray-50 font-medium rounded-lg transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
                 {item.dropdown && (
-                  <div className="ml-4 space-y-1">
+                  <div className="ml-4 mt-2 space-y-1 bg-gray-50 rounded-lg p-2">
                     {item.dropdown.map((subItem) => (
                       <Link
                         key={subItem.name}
                         href={subItem.href}
-                        className="block py-1 text-sm text-gray-600 hover:text-primary-600"
+                        className="block py-2 px-3 text-sm text-gray-600 hover:text-primary-600 hover:bg-white rounded-md transition-colors"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {subItem.name}
@@ -120,13 +120,15 @@ const Header = () => {
                 )}
               </div>
             ))}
-            <Link
-              href="/contact"
-              className="inline-block mt-4 btn-primary"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Get Started
-            </Link>
+            <div className="mt-4 pt-4 border-t border-gray-200">
+              <Link
+                href="/contact"
+                className="block w-full text-center btn-primary"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
         )}
       </nav>

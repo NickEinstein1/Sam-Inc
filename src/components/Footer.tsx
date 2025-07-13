@@ -1,21 +1,21 @@
 import Link from 'next/link'
-import { Mail, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react'
+import { Mail, MapPin, Linkedin, X, Facebook } from 'lucide-react'
 
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 gradient-bg rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold">S</span>
               </div>
               <h3 className="text-xl font-bold">SAM INC</h3>
             </div>
-            <p className="text-gray-300">
-              Leading provider of professional tax consultancy, financial auditing, 
+            <p className="text-gray-300 text-sm sm:text-base">
+              Leading provider of professional tax consultancy, financial auditing,
               data analytics, and AI solutions. Your trusted partner for business success.
             </p>
             <div className="flex space-x-4">
@@ -23,7 +23,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
+                <X className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
