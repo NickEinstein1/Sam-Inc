@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { Mail, Clock, Send, CheckCircle } from 'lucide-react'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -28,12 +28,6 @@ export default function ContactPage() {
   }
 
   const contactInfo = [
-    {
-      icon: MapPin,
-      title: 'Office Address',
-      details: ['123 Business Avenue, Suite 100', 'Seattle, Washington 98101', 'United States']
-    },
-
     {
       icon: Mail,
       title: 'Email Addresses',
@@ -228,28 +222,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Visit Our Office</h2>
-            <p className="text-xl text-gray-600">
-              Located in the heart of the business district, easily accessible by public transport.
-            </p>
-          </div>
-          
-          <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">Interactive Map</h3>
-              <p className="text-gray-500">
-                123 Business Avenue, Suite 100<br />
-                Seattle, Washington 98101
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* FAQ Section */}
       <section className="section-padding bg-gray-50">
