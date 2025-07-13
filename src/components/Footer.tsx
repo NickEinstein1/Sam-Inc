@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, MapPin, Linkedin, X, Facebook } from 'lucide-react'
+import { Mail, Linkedin, X, Facebook } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -94,10 +94,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Contact Info</h4>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-primary-400" />
-                <span className="text-gray-300">123 Business Ave, Suite 100<br />Seattle, Washington 98101</span>
-              </div>
+
 
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
