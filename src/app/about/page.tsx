@@ -26,28 +26,10 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: 'Sarah Mitchell',
-      role: 'CEO & Senior Tax Consultant',
-      experience: '15+ years',
-      specialization: 'Corporate Tax Strategy'
-    },
-    {
-      name: 'Alex Rodriguez',
-      role: 'Chief Financial Officer',
-      experience: '12+ years',
-      specialization: 'Financial Auditing'
-    },
-    {
-      name: 'Dr. Michael Chen',
-      role: 'Head of Data Analytics',
-      experience: '10+ years',
-      specialization: 'Business Intelligence'
-    },
-    {
-      name: 'Jennifer Park',
-      role: 'AI Solutions Director',
-      experience: '8+ years',
-      specialization: 'Machine Learning'
+      name: 'Samuel Wanyoike',
+      role: 'CEO & Founder',
+      experience: 'Visionary Leader',
+      specialization: 'Strategic Business Development'
     }
   ]
 
@@ -195,27 +177,29 @@ export default function AboutPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Leadership</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the experienced professionals who lead SAM INC and drive our 
-              commitment to excellence.
+              Meet the visionary leader who founded SAM INC and drives our
+              commitment to excellence and innovation.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 text-center">
-                <div className="w-24 h-24 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-white font-bold text-2xl">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+
+          <div className="flex justify-center">
+            <div className="max-w-sm">
+              {team.map((member, index) => (
+                <div key={index} className="bg-gray-50 rounded-xl p-8 text-center card-shadow">
+                  <div className="w-32 h-32 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                    <span className="text-white font-bold text-3xl">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-3">{member.name}</h3>
+                  <p className="text-primary-600 font-medium mb-3 text-lg">{member.role}</p>
+                  <p className="text-gray-600 mb-2">{member.experience}</p>
+                  <p className="text-gray-500">{member.specialization}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-primary-600 font-medium mb-2">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-1">{member.experience} Experience</p>
-                <p className="text-gray-500 text-sm">{member.specialization}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
